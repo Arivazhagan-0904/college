@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+
+
+.login-container {
+  text-align: center;
+  padding: 40px;
+  background:rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  width: 500px;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Flexbox for Options */
+.options {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally for desktop */
+  align-items: center;
+  gap: 30px; /* Spacing between items */
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+/* Icons */
+.option-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.option-icon:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.2);
+}
+
+/* Buttons */
+.option-button {
+  margin-top: 15px;
+  padding: 15px 30px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.option-button:hover {
+  background-color: #555;
+}
+
+/* OR Text */
+.or-text {
+  font-size: 1.8em;
+  color: #333;
+  align-self: center;
+  margin: 20px 0;
+}
+
+/* Media Queries */
+
+/* For Desktop Screens (Min Width: 1025px) */
+@media screen and (min-width: 1025px) {
+  .options {
+    flex-direction: row; /* Horizontal layout for desktop */
+    gap: 40px;
+  }
+
+  .or-text {
+    position: relative;
+    align-self: center;
+  }
+}
+
+/* For Tablets (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .login-container {
+    width: 90%; /* Reduce container width */
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2em; /* Adjust heading size */
+  }
+
+  .options {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+  }
+
+  .or-text {
+    margin: 10px 0; /* Adjust spacing */
+  }
+}
+
+/* For Mobile Devices (Up to 768px) */
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8em; /* Smaller heading */
+  }
+
+  .option-icon {
+    width: 100px; /* Smaller icons */
+    height: 100px;
+  }
+
+  .option-button {
+    font-size: 1em; /* Smaller button font */
+    padding: 10px 20px;
+  }
+
+  .options {
+    flex-direction: column; /* Vertical layout */
+    gap: 15px;
+  }
+
+  .or-text {
+    font-size: 1.5em; /* Adjust OR size */
+  }
+}
