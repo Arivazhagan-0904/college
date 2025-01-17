@@ -14,7 +14,7 @@ const HomePage = () => {
 
         </ul>
       </nav>
-      bu
+      <button>FORUM</button>
     </div>
   )
 }
