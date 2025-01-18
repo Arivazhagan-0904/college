@@ -1,20 +1,22 @@
-import React from 'react'
-import "./HomePage.css";
+import React from 'react';
+import SideBar from "./SideBar.jsx"
+import TopBar from "./TopBar.jsx"
+import DashBoard from "./DashBoard.jsx"
+import ChatBar from "./ChatBar.jsx"
+import MainContent from './MainContent.jsx';
+import "./HomePage.css"
 
 const HomePage = () => {
   return (
-    <div className="home-page">
-      <nav>
-        <ul>
-          <li><a href="#">FORUM</a></li>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">MENU</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">Login</a></li>
-
-        </ul>
-      </nav>
-      <button>FORUM</button>
+    <div className="home-container">
+      <SideBar/>
+      <div className="main-container">
+        <TopBar/>
+        <MainContent/>
+        
+        
+      </div>
+      <DashBoard/>
     </div>
   )
 }

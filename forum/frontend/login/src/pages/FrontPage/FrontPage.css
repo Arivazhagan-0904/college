@@ -58,7 +58,7 @@ h1 {
   height: 120px;
   border-radius: 50%;
   border: 3px solid #333;
-  background: #fff;
+  background:url("./teacher-icon.png");
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,6 +6,8 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword.jsx";
 import OtpVerification from "./pages/OtpVerification/OtpVerification.jsx";
 import PasswordValidation from "./pages/PassSet/PasswordValidation.jsx"
 import RegisterPage from "./pages/RegisterPage/Register.jsx"
+import ChatPage from "./pages/ChatPage/ChatPage.jsx";
+
 function App() {
   return(
     <BrowserRouter>
@@ -17,6 +19,8 @@ function App() {
         <Route path="/OtpVerification" element={<OtpVerification/>}/>
         <Route path="/PasswordValidation" element={<PasswordValidation/>}/>
         <Route path="/RegisterPage" element={<RegisterPage/>}/>
+        <Route path="/ChatPage" element={<ChatPage/>}/>
+        
 
       </Routes>
     </BrowserRouter>

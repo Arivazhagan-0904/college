@@ -1,0 +1,17 @@
+.chatbar {
+  grid-area: chatbar;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: baseline;
+}
+}
+.chatbar input{
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+
+}

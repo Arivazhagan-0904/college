@@ -2,16 +2,22 @@ import React, { useState } from "react";
 import "./OtpVerification.css";
 
 const OtpVerification = () => {
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = useState("");
 
-  const handleChange = (value, index) => {
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    // Allow only numeric values and limit the input to 6 digits
+    if (/^\d*$/.test(value) && value.length <= 6) {
+      setOtp(value);
+    }
   };
 
   const handleSubmit = () => {
-    alert(`Submitted OTP: ${otp.join("")}`);
+    if (otp.length === 6) {
+      alert(`Submitted OTP: ${otp}`);
+    } else {
+      alert("Please enter a valid 6-digit OTP.");
+    }
   };
 
   return (
@@ -27,17 +33,13 @@ const OtpVerification = () => {
         <p>
           Enter OTP Code sent to <strong>+880********42</strong>
         </p>
-        <div className="otp-inputs">
-          {otp.map((digit, index) => (
-            <input
-              key={index}
-              type="text"
-              maxLength="1"
-              value={digit}
-              onChange={(e) => handleChange(e.target.value, index)}
-            />
-          ))}
-        </div>
+        <input
+          type="text"
+          value={otp}
+          onChange={handleChange}
+          placeholder="Enter OTP"
+          className="otp-input"
+        />
         <p>
           Didn’t receive OTP code? <a href="#resend">Resend Code</a>
         </p>

@@ -14,7 +14,7 @@ const FrontPage = () => {
           </h1>
           <div className="options">
             <div className="option">
-              <img src=" " alt="Teacher" className="option-icon"/>
+              <img src="./student-icon.jpg" alt="Teacher" className="option-icon"/>
               <button className="option-button">
                 <Link to="/LoginPage">TEACHER</Link></button>
             </div>
